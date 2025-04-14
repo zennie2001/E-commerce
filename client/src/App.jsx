@@ -11,6 +11,7 @@ import PlaceOrder from "./Pages/PlaceOrder"
 import Product from "./Pages/Product"
 import Contact from "./Pages/Contact"
 import Navbar from "./Components/Navbar"
+import Footer from "./Components/Footer"
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <Route path='/product/:productId' element={<Product/>} />
       <Route path='/contact' element={<Contact/>} />
     </Routes>
+    <Footer/>
 
    </div>
   )
