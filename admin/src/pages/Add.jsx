@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { assets } from '../assets/assets'
+import axios from 'axios'
+import { backendUrl } from '../App'
+import { toast } from 'react-toastify';
 
-function Add() {
+function Add({token}) {
 
     const [image1, setImage1]= useState(false)
     const [image2, setImage2]= useState(false)
@@ -20,9 +23,38 @@ function Add() {
         e.preventDefault();
 
         try {
+            const formData = new FormData()
+
+            formData.append("name", name)
+            formData.append("description", description)
+            formData.append("price", price)
+            formData.append("category", category)
+            formData.append("subCategory", subCategory)
+            formData.append("bestseller", bestseller)
+            formData.append("sizes", JSON.stringify(sizes))
+
+            image1 && formData.append("image1", image1)
+            image2 && formData.append("image2", image2)
+            image3 && formData.append("image3", image3)
+            image4 && formData.append("image4", image4)
+
+            const response = await axios.post(backendUrl + "/api/product/add", formData, {headers:{token}})
             
+            if(response.data.Success){
+                toast.success(response.data.message)
+                setName(''),
+                setDescription('')
+                setImage1(false)
+                setImage2(false)
+                setImage3(false)
+                setImage4(false)
+                setPrice('')
+            }else(
+                toast.error(response.data.message)
+            )
+
         } catch (error) {
-            
+           toast.error(error.message) 
         }
     }
 
