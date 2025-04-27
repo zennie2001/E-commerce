@@ -73,11 +73,15 @@ import contact_img from './contact_img.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
-import esewa_logo from './esewalogo.jpg'
+import esewa_logo from './esewa1.png'
 import khalti_logi from './khaltilogo.png'
+import home_img from './front.jpg'
+import banner_img from './bannerh.png'
 
 export const assets = {
     logo,
+    home_img,
+    banner_img,
     hero_img,
     cart_icon,
     dropdown_icon,

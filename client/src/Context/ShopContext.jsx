@@ -16,8 +16,8 @@ const ShopContextProvider = (props) =>{
 
   
 
-    const currency = '$'
-    const delivery_fee = 10;
+    const currency = 'Rs.'
+    const delivery_fee = 110;
     const backendUrl = import.meta.env.VITE_BACKEND_URL
 
     const addToCart = async(itemId, size) =>{

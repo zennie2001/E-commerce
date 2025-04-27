@@ -70,6 +70,15 @@ function PlaceOrder() {
           }
           break;
 
+          case 'esewa':
+            const responseEsewa = await axios.post(backendUrl + '/api/order/eswea', orderData, {headers:{token}})
+            if (responseEsewa.data.Success){
+              //window.location.href = responseEsewa.data.url;
+              setCartItems({})
+              navigate('/esewa')
+            }
+            break;
+
         default:
           break;
 
@@ -128,7 +137,7 @@ function PlaceOrder() {
           <div className='flex gap-3 flex-col lg:flex-row'>
             <div onClick={()=>setMethod('esewa')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
                 <p className={`min-w-3.5 h-3.5 border rounded-full  ${method === 'esewa' ? 'bg-green-400' : ''}   `}></p>
-                <img className='h-8 mx-4' src={assets.esewa_logo} />
+                <img className='h-9 mx-4' src={assets.esewa_logo} />
                 
             </div>
             <div onClick={()=>setMethod('khalti')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>

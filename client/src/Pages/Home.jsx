@@ -12,7 +12,7 @@ function Home() {
         <LatestCollections />
        <BestSellers/>
        <OurPolicy/>
-       <NewsletterBox/>
+       
     </div>
   )
 }

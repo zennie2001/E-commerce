@@ -1,5 +1,6 @@
 import orderModel from "../Models/orderModel.js";
 import userModel from "../Models/userModel.js";
+import { EsewaPaymentGateway,EsewaCheckStatus } from "esewajs";
 
 
 //placing orders using COD methos
@@ -35,6 +36,25 @@ const placeOrder = async (req , res)=>{
 //placing orders using esewa methos
 const placeOrderEsewa = async (req , res)=>{
     
+    try {
+        const {userId, items, amount, address} = req.body;
+
+        const orderData = {
+            userId,
+            items,
+            address,
+            amount,
+            paymentmethods:'eSewa',
+            payment:false,
+            date: Date.now()
+        }
+
+        const newOrder = new orderModel(orderData)
+        await newOrder.save()
+        
+    } catch (error) {
+        
+    }
 }
 
 //placing orders using Khalti methos
@@ -71,7 +91,16 @@ const userOrders = async (req , res)=>{
 
 //update order status from Admin Panel
 const updateStatus = async (req , res)=>{
-    
+    try {
+        const {orderId, status} = req.body
+
+        await orderModel.findByIdAndUpdate(orderId, {status})
+        res.json({Success:true, message:"Status Updated"})
+        
+    } catch (error) {
+        console.log(error)
+        res.json({Success:false, message:error_message}) 
+    }
 }
 
 export {placeOrder, placeOrderEsewa, placeOrderKhalti, allOrders, userOrders, updateStatus}

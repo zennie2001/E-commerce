@@ -14,6 +14,9 @@ import Navbar from "./Components/Navbar"
 import Footer from "./Components/Footer"
 import SearchBar from "./Components/SearchBar"
 import { ToastContainer, toast } from 'react-toastify';
+import EsewaPaymentForm from "./Pages/EsewaPaymentForm"
+import SuccessEsewa from "./Pages/SuccessEsewa"
+import FailureEsewa from "./Pages/FailureEsewa"
 
 function App() {
 
@@ -33,6 +36,10 @@ function App() {
       <Route path='/place-order' element={<PlaceOrder/>} />
       <Route path='/product/:productId' element={<Product/>} />
       <Route path='/contact' element={<Contact/>} />
+      <Route path='/esewa' element={<EsewaPaymentForm/>} />
+      <Route path="/payment-success" element={<SuccessEsewa />} />
+      <Route path="/payment-failure" element={<FailureEsewa />} />
+      
     </Routes>
     <Footer/>
 
