@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { ShopContext } from '../Context/ShopContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import EsewaPaymentForm from './EsewaPaymentForm'
 
 function PlaceOrder() {
   const [method, setMethod] =useState('cod')
@@ -59,9 +60,11 @@ function PlaceOrder() {
       switch(method){
         //API calls for COD
         case 'cod':
+          
           const response = await axios.post(backendUrl + '/api/order/place', orderData, {headers:{token}})
-          console.log(response.data)
+          
           if(response.data.Success){
+          toast.success("Order Placed")
             setCartItems({})
             navigate("/orders")
           }else{
@@ -71,13 +74,22 @@ function PlaceOrder() {
           break;
 
           case 'esewa':
-            const responseEsewa = await axios.post(backendUrl + '/api/order/eswea', orderData, {headers:{token}})
-            if (responseEsewa.data.Success){
-              //window.location.href = responseEsewa.data.url;
-              setCartItems({})
-              navigate('/esewa')
-            }
+            navigate('/esewa', {state: {orderData}})
+            
             break;
+
+
+          case 'khalti':
+              const responseKhalti = await axios.post(backendUrl + '/api/order/khalti', orderData, {headers:{token}})
+          
+          if(responseKhalti.data.Success){
+            toast.success("Order Placed")
+            setCartItems({})
+            navigate("/orders")
+          }else{
+            console.log(responseKhalti.data.message)
+            //toast.error(response.data.message)
+          }
 
         default:
           break;

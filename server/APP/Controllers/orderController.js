@@ -49,17 +49,58 @@ const placeOrderEsewa = async (req , res)=>{
             date: Date.now()
         }
 
+        const  reqPayment=await EsewaPaymentGateway(
+            amount,0,0,0,userId,process.env.MERCHANT_ID,process.env.ESEWA_SECRET_KEY,process.env.SUCCESS_URL,process.env.FAILURE_URL,process.env.ESEWAPAYMENT_URL,undefined,undefined)
+      if(!reqPayment){
+        return res.json({Success:false, message:"error sending data"})
+      }
+      if (reqPayment) {
         const newOrder = new orderModel(orderData)
-        await newOrder.save()
+        await newOrder.save();
+
+        await userModel.findByIdAndUpdate(userId, {cartData:{}})
+
+        res.json({Success:true, 
+            url: reqPayment.request.res.responseUrl,
+            message:"Order Placed"})
+      }
+
+       
         
     } catch (error) {
-        
+        console.log(error)
+        res.json({Success:false, message:error_message})  
     }
 }
 
 //placing orders using Khalti methos
 const placeOrderKhalti = async (req , res)=>{
-    
+    try {
+
+        const {userId, items, amount, address} = req.body;
+
+        const orderData = {
+            userId,
+            items,
+            address,
+            amount,
+            paymentmethods:'Khalti',
+            payment:true,
+            date: Date.now()
+        }
+
+        const newOrder = new orderModel(orderData)
+        await newOrder.save()
+
+        await userModel.findByIdAndUpdate(userId, {cartData:{}})
+
+        res.json({Success:true, message:"Order Placed"})
+        
+    } catch (error) {
+        console.log(error)
+        res.json({Success:false, message:error_message})
+    }
+
 }
 
 //All order Data for Admin Panel
