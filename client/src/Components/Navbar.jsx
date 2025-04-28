@@ -42,6 +42,10 @@ function Navbar() {
             <p>CONTACT</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </NavLink>
+            <a href='https://e-commerce-admin-umber-ten.vercel.app'  target="_blank" rel="noopener noreferrer" className='flex items-center border border-gray-500 h-8 px-4 text-xs   -mt-1 rounded-full  '> 
+                <p className=''>Admin Panel</p>
+            </a>
+
 
         </ul>
 
