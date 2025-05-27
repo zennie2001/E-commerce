@@ -5,15 +5,29 @@ full-featured MERN stack e-commerce web app with role-based access for Admin and
 ### Live Demonstration:
 For E-commerce live demo [Click here](https://e-commerce-frontend-drab-nine.vercel.app/)
 
-### Back-End Development Languages
--Node.js
--Expres.js
--MongoDB
--JWT for Authentication
--Cloudinary
+### ⚙️Back-End Development 
+* Node.js
+* Expres.js
+* MongoDB
+* JWT for Authentication
+* Cloudinary
 
-### Front-End Development Languages
--React.js
--Tailwind CSS
--Javascript
--HTML/CSS
+### Front-End Development
+* React.js
+* Tailwind CSS
+* Javascript
+* HTML/CSS
+
+### Getting Started
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
