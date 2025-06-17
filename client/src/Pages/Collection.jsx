@@ -28,7 +28,7 @@ function Collection() {
   }
 
   const applyFilter = () =>{
-    let producsCopy = products.slice();
+    let producsCopy = [...products].reverse(); //newest first
 
     if(showSearch && search){
       producsCopy = producsCopy.filter(item=> item.name.toLowerCase().includes(search.toLowerCase()))

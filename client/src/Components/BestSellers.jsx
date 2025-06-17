@@ -9,7 +9,7 @@ function BestSellers() {
     
    useEffect(()=>{
     
-    setBestSeller(products.slice(0, 5))
+    setBestSeller([...products].reverse().slice(0, 5))
 }, [products])
    
 
