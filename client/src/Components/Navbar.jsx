@@ -42,7 +42,7 @@ function Navbar() {
             <p>CONTACT</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </NavLink>
-            <a href='https://e-commerce-admin-umber-ten.vercel.app'  target="_blank" rel="noopener noreferrer" className='flex items-center border border-gray-500 h-8 px-4 text-xs   -mt-1 rounded-full  '> 
+            <a href='https://e-commerce-admin-umber-ten.vercel.app'  target="_blank" rel="noopener noreferrer" className='flex items-center border border-gray-500 h-8 px-4 text-xs   -mt-1 rounded-full hover:bg-slate-700 hover:text-white '> 
                 <p className=''>Admin Panel</p>
             </a>
 
@@ -50,8 +50,9 @@ function Navbar() {
         </ul>
 
         <div className='flex items-center gap-6'>
+            <Link to='/collection' >
             <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer ' alt='' />
-
+            </Link>
 
             <div className='group relative'>
                 <img onClick={() => token ? null : navigate('/login')} src={assets.profile_icon} className='w-5 cursor-pointer ' alt=''/> 

@@ -13,7 +13,7 @@ import Contact from "./Pages/Contact"
 import Navbar from "./Components/Navbar"
 import Footer from "./Components/Footer"
 import SearchBar from "./Components/SearchBar"
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import EsewaPaymentForm from "./Pages/EsewaPaymentForm"
 import SuccessEsewa from "./Pages/SuccessEsewa"
 import FailureEsewa from "./Pages/FailureEsewa"
