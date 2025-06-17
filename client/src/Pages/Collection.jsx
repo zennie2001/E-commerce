@@ -54,6 +54,7 @@ function Collection() {
 
   
   return (
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
 
       {/* filter options */}
@@ -124,6 +125,7 @@ function Collection() {
 
       </div>
 
+    </div>
     </div>
   )
 }

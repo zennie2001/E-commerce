@@ -80,7 +80,7 @@ function PlaceOrder() {
 
 
           case 'khalti':
-              const responseKhalti = await axios.post(backendUrl + '/api/order/khalti', orderData, {headers:{token}})
+              //const responseKhalti = await axios.post(backendUrl + '/api/order/khalti', orderData, {headers:{token}})
           
           if(responseKhalti.data.Success){
             toast.success("Order Placed")
@@ -110,6 +110,7 @@ function PlaceOrder() {
   
 
   return (
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
     <form onSubmit={onSubmitHandler} className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
       {/* Left side */}
       <div className='flex flex-col gap-4 w-full sm:max-w-[480px]'>
@@ -174,6 +175,7 @@ function PlaceOrder() {
       </div>
 
     </form>
+    </div>
   )
 }
 

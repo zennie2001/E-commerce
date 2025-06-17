@@ -32,6 +32,7 @@ function Product() {
   },[productId, products])
 
   return productData ? (
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
     <div className='border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100'>
       {/* product Data */}
       <div className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
@@ -70,7 +71,7 @@ function Product() {
             <p>Select Size</p>
             <div className='flex gap-2 '>
               {productData.sizes.map((item, index)=>(
-                <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item === size ? 'border-orange-500' : ''}`}>{item}</button>
+                <button key={index} onClick={()=>setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item === size ? 'border-orange-500' : ''}`}>{item}</button>
               ))}
 
             </div>
@@ -95,7 +96,7 @@ function Product() {
       <div className='mt-20'>
         <div className='flex'>
          <b className='border px-5 py-3 text-sm'>DESCRIPTION</b>
-         <p className='border px-5 py-3 text-sm'>Reviews (122)</p>
+         <p className='border px-5 py-3 text-sm'>Reviews ({ Math.floor(1000 * Math.random())})</p>
 
         </div>
         <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
@@ -108,6 +109,7 @@ function Product() {
       {/* Display related products */}
       <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
 
+    </div>
     </div>
   ) : <div className='opacity-0'></div>
 }

@@ -22,6 +22,7 @@ function Navbar() {
 
 
   return (
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
     <div className='flex item-centre justify-between py-5 font-medium'>
         <Link to={'/'}><img src={assets.logo} className='w-36' alt='' /></Link>
 
@@ -101,6 +102,7 @@ function Navbar() {
 
 
 
+    </div>
     </div>
   )
 }

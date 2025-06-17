@@ -8,7 +8,7 @@ function Footer() {
       };
     
   return (
-    <div>
+    <div className="bg-gray-100 pt-1 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
             <div>
                 <img src={assets.logo} className='mb-5 w-32 ' />

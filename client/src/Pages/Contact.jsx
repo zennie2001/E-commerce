@@ -4,7 +4,7 @@ import { assets } from '../assets/assets'
 
 function Contact() {
   return (
-    <div>
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
       <div className='text-center text-2xl pt-10 border-t'>
         <Title text1={'CONTACT'} text2={'US'} />
 
@@ -18,7 +18,7 @@ function Contact() {
           <p className='text-gray-500'>Phone: 9877777777 <br/> Email: admin@foreverchoice.com</p>
           <p className='font-semibold text-xl text-gray-600' >Careers at Forever</p>
           <p className='text-gray-500'>Learn more about our teams and job openings</p>
-          <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500' >Explore Jobs</button>
+          <button className='border border-black rounded-md px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500' >Explore Jobs</button>
         </div>
 
       </div>
