@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
-    <div className='relative border  border-gray-400 rounded-md shadow-lg shadow-slate-300'>
+    <div className='relative border  border-gray-400 rounded-md shadow-sm shadow-slate-300'>
         {/*Hero Left side*/}
         
 

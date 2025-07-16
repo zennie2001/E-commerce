@@ -81,7 +81,7 @@ function Navbar() {
         </div>
 
         {/* sidebar menu for small screens */}
-        <div className={`absolute top-0 right-0 buttom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
+        <div className={`absolute top-0 right-0 buttom-0 overflow-hidden bg-white transition-all z-50 ${visible ? 'w-full' : 'w-0'}`}>
             <div className='flex flex-col text-gray-600'>
                 <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
                     <img className='h-4 rotate-180' src={assets.dropdown_icon} alt='' />
