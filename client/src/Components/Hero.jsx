@@ -48,7 +48,7 @@ function Hero() {
 
       {/* Shop Now button */}
       <Link to="/collection">
-        <button className="absolute bottom-8 left-1/2 transform -translate-x-1/2 px-4 py-2 border border-gray-400 rounded hover:bg-gray-400 hover:text-white">
+        <button className="absolute bottom-8 left-1/2 transform -translate-x-1/2 px-4 py-2 border bg-gray-400 text-white border-gray-400 rounded hover:bg-gray-500 hover:text-white">
           Shop Now
         </button>
       </Link>
