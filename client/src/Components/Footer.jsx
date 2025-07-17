@@ -10,17 +10,17 @@ function Footer() {
   return (
     <div className="bg-gray-100 pt-1 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <div className='flex flex-col sm:grid grid-cols-[1.5fr_1fr_1fr] gap-14 my-10 mt-10 text-sm'>
-            <div>
-                <img src={assets.logo} className='mb-5 w-32 ' />
-                <p className='w-full md:w-2/3 text-gray-600'>
+            <div className='flex flex-col justify-start'>
+                <img src={assets.logo} className='mb-5 w-40 h-28 ' />
+                <p className='w-full md:w-2/3 text-gray-600 text-xl'>
                     Foerver Choice Pvt.Ltd.
                 </p>
-                <p className='w-full md:w-2/3 text-gray-600'>Baneshwor, Kathmandu, Nepal</p>
+                <p className='w-full md:w-2/3 text-gray-600 text-xl'>Kathmandu, Nepal</p>
             </div>
 
-            <div>
-                <p className='text-xl font-medium mb-5'>COMPANY</p>
-                <ul className='flex flex-col gap-1 text-gray-600'>
+            <div className='lg:pt-12'>
+                <p className='text-2xl font-medium mb-5'>COMPANY</p>
+                <ul className='flex flex-col gap-1 text-gray-600 text-lg'>
                     <Link to='/' onClick={scrollToTop}><li>Home</li></Link>
                     <Link to='/about' onClick={scrollToTop}><li>About us</li></Link>
                     <li>Delivery</li>
@@ -28,10 +28,10 @@ function Footer() {
                 </ul>
             </div>
 
-            <div>
-                <p className='text-xl font-medium mb-5'>CONNECT WITH US</p>
-                <ul className='flex flex-col gap-1 text-gray-600'>
-                    <li>+977-984567892</li>
+            <div className='pt-12'>
+                <p className='text-2xl font-medium mb-5'>CONNECT WITH US</p>
+                <ul className='flex flex-col gap-1 text-gray-600 text-lg'>
+                    <li>+977-9800000000</li>
                     <li>contact@foreverchoice.com</li>
                    
                 </ul>
