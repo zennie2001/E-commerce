@@ -1,10 +1,20 @@
 import React from 'react'
 import Title from '../Components/Title'
 import { assets } from '../assets/assets'
+import { Helmet } from 'react-helmet';
 
 function About() {
   return (
-    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+
+    <>
+     <Helmet>
+        <title>About Us | Forever Choice</title>
+        <meta 
+        name="description" 
+        content="Discover the latest trends in clothing, shoes, and accessories at Forever Choice. Shop quality fashion products online with fast delivery and secure checkout." />
+      </Helmet>
+
+      <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
       <div className='text-2xl text-center pt-8 border-t'>
         <Title text1={'ABOUT'} text2={'US'} />
          
@@ -46,6 +56,9 @@ function About() {
         
       </div>
     </div>
+    </>
+    
+    
   )
 }
 
