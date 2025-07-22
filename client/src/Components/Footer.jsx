@@ -20,11 +20,11 @@ function Footer() {
 
             <div className='lg:pt-12'>
                 <p className='text-2xl font-medium mb-5'>COMPANY</p>
-                <ul className='flex flex-col gap-1 text-gray-600 text-lg'>
-                    <Link to='/' onClick={scrollToTop}><li>Home</li></Link>
-                    <Link to='/about' onClick={scrollToTop}><li>About us</li></Link>
-                    <li>Delivery</li>
-                    <li>Privacy policy</li>
+                <ul className='flex flex-col gap-1 text-gray-600 text-lg '>
+                    <Link to='/' onClick={scrollToTop}><li className='hover:text-black '>Home</li></Link>
+                    <Link to='/about' onClick={scrollToTop}><li className='hover:text-black '>About Us</li></Link>
+                    <Link to='/contact'><li className='hover:text-black'>Contact Us</li></Link>
+                    <li className='hover:text-black '>Privacy Policy</li>
                 </ul>
             </div>
 

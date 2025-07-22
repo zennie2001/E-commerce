@@ -28,7 +28,7 @@ function Navbar() {
     <div className='flex item-centre justify-between py-5 font-medium'>
         <Link to={'/'}><img src={assets.logo} className='w-36' alt='' /></Link>
 
-        <ul className='hidden sm:flex gap-5 text-sm text-gray-700 mt-5'>
+        <ul className='hidden sm:flex gap-8 text-lg text-gray-700 mt-5'>
             <NavLink to='/' className='flex flex-col items-center gap-1'>
             <p>HOME</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
@@ -38,7 +38,7 @@ function Navbar() {
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </NavLink>
             <NavLink to='/about' className='flex flex-col items-center gap-1'>
-            <p>ABOUT</p>
+            <p>ABOUT US</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </NavLink>
             <NavLink to='/contact' className='flex flex-col items-center gap-1'>

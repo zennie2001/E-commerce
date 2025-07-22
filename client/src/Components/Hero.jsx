@@ -3,9 +3,11 @@ import { assets } from '../assets/assets';
 import { Link } from 'react-router-dom';
 import banner1 from "../assets/banner1.png";
 import banner2nd from "../assets/banner2nd.png";
+import banner3 from "../assets/banner3.png";
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 
 const sliderImages = [
+  banner3,
   banner1,
   banner2nd,
   assets.banner_img, // third banner
