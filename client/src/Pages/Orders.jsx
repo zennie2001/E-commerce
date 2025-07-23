@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import Title from '../Components/Title'
 import axios from 'axios'
+import { Helmet } from 'react-helmet';
 
 function Orders() {
   const {backendUrl,token , currency} = useContext(ShopContext)
@@ -47,7 +48,15 @@ function Orders() {
 
 
   return (
-    <div className='border-t pt-16'>
+    <>
+    <Helmet>
+        <title>Order Details & Status | Forever Choice</title>
+        <meta 
+        name="description" 
+        content="Discover the latest trends in clothing, shoes, and accessories at Forever Choice. Shop quality fashion products online with fast delivery and secure checkout." />
+      </Helmet>
+
+       <div className='border-t pt-16'>
       <div className='text-2xl'>
         <Title text1={'MY'} text2={'ORDERS'} />
 
@@ -88,6 +97,9 @@ function Orders() {
       </div>
 
     </div>
+    </>
+
+   
   )
 }
 
