@@ -4,6 +4,7 @@ import Title from '../Components/Title'
 import { assets } from '../assets/assets'
 import CartTotal from '../Components/CartTotal'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
 
 function Cart() {
 
@@ -34,7 +35,15 @@ function Cart() {
 
 
   return (
-    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+    <>
+     <Helmet>
+        <title>Cart - View Your Selected Items | Forever Choice</title>
+        <meta 
+        name="description" 
+        content="Discover the latest trends in clothing, shoes, and accessories at Forever Choice. Shop quality fashion products online with fast delivery and secure checkout." />
+      </Helmet>
+
+      <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
     <div className='border-t pt-14'>
       <div className='text-2xl mb-3'>
         <Title text1={'YOUR'} text2={'CART'} />
@@ -81,6 +90,9 @@ function Cart() {
 
     </div>
     </div>
+    </>
+
+    
   )
 }
 
