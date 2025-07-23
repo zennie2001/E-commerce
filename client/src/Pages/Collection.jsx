@@ -3,6 +3,7 @@ import { ShopContext } from '../Context/ShopContext'
 import { assets } from '../assets/assets'
 import Title from '../Components/Title'
 import ProductItems from '../Components/ProductItems'
+import { Helmet } from 'react-helmet';
 
 function Collection() {
   const { products, search, showSearch } = useContext(ShopContext)
@@ -65,7 +66,15 @@ function Collection() {
   }, [category, subCategory, search, showSearch, products, sortType]) // ADD sortType
 
   return (
-    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] pb-12">
+    <>
+    <Helmet>
+        <title>Explore Our Product Range | Forever Choice</title>
+        <meta 
+        name="description" 
+        content="Discover the latest trends in clothing, shoes, and accessories at Forever Choice. Shop quality fashion products online with fast delivery and secure checkout." />
+      </Helmet>
+
+      <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] pb-12">
       <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
 
         {/* filter options */}
@@ -131,6 +140,8 @@ function Collection() {
         </div>
       </div>
     </div>
+    </>
+    
   )
 }
 
