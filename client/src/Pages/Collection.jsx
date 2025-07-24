@@ -120,9 +120,9 @@ function Collection() {
   value={sortType}
   onChange={(e) => setSortType(e.target.value)}
 >
-  <option className="hover:bg-[#94b9ff]" value="relevant">Sort by: Relevant</option>
-  <option className="hover:bg-[#94b9ff]" value="low-high">Sort by: Low to High</option>
-  <option className="hover:bg-[#94b9ff]" value="high-low">Sort by: High to Low</option>
+  <option className="" value="relevant">Sort by: Relevant</option>
+  <option className="" value="low-high">Sort by: Low to High</option>
+  <option className="" value="high-low">Sort by: High to Low</option>
 </select>
 
           </div>
