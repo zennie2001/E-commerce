@@ -115,15 +115,16 @@ function Collection() {
         <div className='flex-1 '>
           <div className='flex justify-between text-base sm:text-2xl mb-2'>
             <Title text1={'ALL'} text2={'COLLECTIONS'} />
-            <select
-              className='border-2 border-gray-300 text-sm'
-              value={sortType}
-              onChange={(e) => setSortType(e.target.value)}
-            >
-              <option value="relevant">Sort by: Relevant</option>
-              <option value="low-high">Sort by: Low to High</option>
-              <option value="high-low">Sort by: High to Low</option>
-            </select>
+            <select 
+  className="border-2 border-gray-300 text-sm ] text-black"
+  value={sortType}
+  onChange={(e) => setSortType(e.target.value)}
+>
+  <option className="hover:bg-[#94b9ff]" value="relevant">Sort by: Relevant</option>
+  <option className="hover:bg-[#94b9ff]" value="low-high">Sort by: Low to High</option>
+  <option className="hover:bg-[#94b9ff]" value="high-low">Sort by: High to Low</option>
+</select>
+
           </div>
 
           <div className='grid grid-cols-2 mt-4 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
