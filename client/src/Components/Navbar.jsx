@@ -42,35 +42,35 @@ function Navbar() {
             </NavLink>
             <div className="relative group">
             <div className="flex items-center gap-1 cursor-pointer">
-                <NavLink to="/collection" className="flex items-center gap-1 text-gray-700">
+                <div className="flex items-center gap-1 text-gray-700">
                 <p>COLLECTION</p>
                 <FaChevronDown className="text-sm mt-[2px]" />
-                </NavLink>
+                </div>
             </div>
 
             {/* Dropdown menu */}
-            <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white shadow-lg rounded text-sm z-20 min-w-[170px]">
+            <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col text-lg bg-white shadow-lg rounded  z-20 min-w-[170px]">
                   <NavLink
                 to="/collection/accessories"
-                className="px-4 py-2 hover:bg-gray-100 text-gray-700"
+                className="px-4 py-2 text-md hover:bg-gray-100 text-gray-600"
                 >
                 Accessories
                 </NavLink>
                 <NavLink
                 to="/collection/women-clothing"
-                className="px-4 py-2 hover:bg-gray-100 text-gray-700"
+                className="px-4 py-2 text-md hover:bg-gray-100 text-gray-600"
                 >
                 Women’s Clothing
                 </NavLink>
                 <NavLink
                 to="/collection/men-clothing"
-                className="px-4 py-2 hover:bg-gray-100 text-gray-700"
+                className="px-4 py-2 text-md hover:bg-gray-100 text-gray-600"
                 >
                 Men’s Clothing
                 </NavLink>
                 <NavLink
                 to="/collection/kid-clothing"
-                className="px-4 py-2 hover:bg-gray-100 text-gray-700"
+                className="px-4 py-2 text-md hover:bg-gray-100 text-gray-600"
                 >
                 Kid’s Clothing
                 </NavLink>
