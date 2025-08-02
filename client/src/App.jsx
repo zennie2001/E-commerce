@@ -17,6 +17,9 @@ import { ToastContainer } from 'react-toastify';
 import EsewaPaymentForm from "./Pages/EsewaPaymentForm"
 import SuccessEsewa from "./Pages/SuccessEsewa"
 import FailureEsewa from "./Pages/FailureEsewa"
+import WomensClothing from "./Pages/WomensClothing"
+import MensClothing from "./Pages/MensClothing"
+import KidsClothing from "./Pages/KidsClothing"
 
 function App() {
 
@@ -32,6 +35,9 @@ function App() {
       <Route path='/about' element={<About/>} />
       <Route path='/cart' element={<Cart/>} />
       <Route path='/collection' element={<Collection/>} />
+      <Route path='/collection/women-clothing' element={<WomensClothing/>} />
+       <Route path='/collection/men-clothing' element={<MensClothing/>} />
+       <Route path='/collection/kid-clothing' element={<KidsClothing/>} />
       <Route path='/login' element={<Login/>} />
       <Route path='/orders' element={<Orders/>} />
       <Route path='/place-order' element={<PlaceOrder/>} />

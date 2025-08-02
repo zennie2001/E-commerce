@@ -4,11 +4,18 @@ import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../Context/ShopContext'
 import { useNavigate } from 'react-router-dom'
 import { GrCart } from "react-icons/gr";
+import { FaChevronDown } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
+
+
 
 
 function Navbar() {
     const [visible , setVisible]= useState(false)
     const navigate = useNavigate()
+
+    const location = useLocation();
+
 
     const {setShowSearch, getCartCount, token ,setToken, setCartItems } = useContext(ShopContext)
 
@@ -33,10 +40,45 @@ function Navbar() {
             <p>HOME</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </NavLink>
-            <NavLink to='/collection' className='flex flex-col items-center gap-1 '>
-            <p>COLLECTION</p>
-            <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
-            </NavLink>
+            <div className="relative group">
+            <div className="flex items-center gap-1 cursor-pointer">
+                <NavLink to="/collection" className="flex items-center gap-1 text-gray-700">
+                <p>COLLECTION</p>
+                <FaChevronDown className="text-sm mt-[2px]" />
+                </NavLink>
+            </div>
+
+            {/* Dropdown menu */}
+            <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white shadow-lg rounded text-sm z-20 min-w-[170px]">
+                  <NavLink
+                to="/collection/accessories"
+                className="px-4 py-2 hover:bg-gray-100 text-gray-700"
+                >
+                Accessories
+                </NavLink>
+                <NavLink
+                to="/collection/women-clothing"
+                className="px-4 py-2 hover:bg-gray-100 text-gray-700"
+                >
+                Women’s Clothing
+                </NavLink>
+                <NavLink
+                to="/collection/men-clothing"
+                className="px-4 py-2 hover:bg-gray-100 text-gray-700"
+                >
+                Men’s Clothing
+                </NavLink>
+                <NavLink
+                to="/collection/kid-clothing"
+                className="px-4 py-2 hover:bg-gray-100 text-gray-700"
+                >
+                Kid’s Clothing
+                </NavLink>
+              
+            </div>
+            </div>
+
+
             <NavLink to='/about' className='flex flex-col items-center gap-1'>
             <p>ABOUT US</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
@@ -53,9 +95,18 @@ function Navbar() {
         </ul>
 
         <div className='flex items-center gap-6'>
-            <Link to='/collection' >
-            <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer ' alt='' />
-            </Link>
+<img
+  onClick={() => {
+    setShowSearch(true);
+    if (location.pathname === '/') {
+      navigate('/collection');
+    }
+  }}
+  src={assets.search_icon}
+  className='w-5 cursor-pointer'
+  alt='search'
+/>
+
 
             <div className='group relative'>
                 <img onClick={() => token ? null : navigate('/login')} src={assets.profile_icon} className='w-5 cursor-pointer ' alt=''/> 
