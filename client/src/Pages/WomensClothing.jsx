@@ -65,12 +65,14 @@ function WomensClothing() {
 
   return (
     <>
-    <Helmet>
-        <title>Explore Our Product Range | Forever Choice</title>
-        <meta 
-        name="description" 
-        content="Discover the latest trends in clothing, shoes, and accessories at Forever Choice. Shop quality fashion products online with fast delivery and secure checkout." />
-      </Helmet>
+   <Helmet>
+    <title>Shop Women’s Clothing & Accessories | Forever Choice</title>
+    <meta
+        name="description"
+        content="Discover the latest trends in women’s clothing, shoes, and accessories at Forever Choice. Stylish and quality fashion with fast delivery and secure checkout."
+    />
+    </Helmet>
+
 
       <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] pb-12">
       <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>

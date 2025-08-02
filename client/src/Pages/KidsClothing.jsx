@@ -65,7 +65,14 @@ function KidsClothing() {
 
   return (
     <>
-   
+   <Helmet>
+  <title>Shop Kids’ Clothing & Accessories | Forever Choice</title>
+  <meta
+    name="description"
+    content="Discover the latest styles in kids’ clothing, shoes, and accessories at Forever Choice. Quality fashion for your little ones with fast delivery and secure checkout."
+  />
+</Helmet>
+
 
       <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] pb-12">
       <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
