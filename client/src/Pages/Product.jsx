@@ -76,18 +76,28 @@ function Product() {
           </div>
           <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
           <p className='mt-5 text-gray-500 md:w-4/5'>{productData.description}</p>
-          <div className='flex flex-col gap-4 my-8'>
-            <p>Select Size</p>
-            <div className='flex gap-2 '>
-              {productData.sizes.map((item, index)=>(
-                <button key={index} onClick={()=>setSize(item)} className={`border py-2 px-4 hover:bg-gray-200 bg-gray-100 ${item === size ? 'border-[#94b9ff]' : ''}`}>{item}</button>
-              ))}
+          {productData.sizes && productData.sizes.length > 0 && (
+              <div className='flex flex-col gap-4 my-8'>
+                <p>Select Size</p>
+                <div className='flex gap-2'>
+                  {productData.sizes.map((item, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSize(item)}
+                      className={`border py-2 px-4 hover:bg-gray-200 bg-gray-100 ${
+                        item === size ? 'border-[#94b9ff]' : ''
+                      }`}
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
-            </div>
-
-
+          <div className='mt-8'>
+            <button  onClick={()=> token ? addToCart(productData._id,size) : navigate('/login')} className='bg-[#94b9ff] hover:bg-blue-400 text-black px-8 py-3 text-sm active:bg-blue-400'>ADD TO CART</button>
           </div>
-          <button  onClick={()=> token ? addToCart(productData._id,size) : navigate('/login')} className='bg-[#94b9ff] hover:bg-blue-400 text-black px-8 py-3 text-sm active:bg-blue-400'>ADD TO CART</button>
           <hr className='mt-8 sm:w-4/5  ' />
           <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
             <p>100% Original Product.</p>
