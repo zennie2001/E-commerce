@@ -95,17 +95,17 @@ function Navbar() {
         </ul>
 
         <div className='flex items-center gap-6'>
-<img
-  onClick={() => {
-    setShowSearch(true);
-    if (location.pathname === '/') {
-      navigate('/collection');
-    }
-  }}
-  src={assets.search_icon}
-  className='w-5 cursor-pointer'
-  alt='search'
-/>
+        <img
+        onClick={() => {
+            setShowSearch(true);
+            if (location.pathname === '/') {
+            navigate('/collection');
+            }
+        }}
+        src={assets.search_icon}
+        className='w-5 cursor-pointer'
+        alt='search'
+        />
 
 
             <div className='group relative'>
@@ -134,21 +134,48 @@ function Navbar() {
         </div>
 
         {/* sidebar menu for small screens */}
-        <div className={`absolute top-0 right-0 buttom-0 overflow-hidden bg-white transition-all z-50 ${visible ? 'w-full' : 'w-0'}`}>
-            <div className='flex flex-col text-gray-600'>
-                <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
-                    <img className='h-4 rotate-180' src={assets.dropdown_icon} alt='' />
-                    <p>Back</p>
-
+        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all z-50 ${visible ? 'w-full' : 'w-0'}`}>
+            <div className="flex flex-col text-gray-600 h-full">
+                <div onClick={() => setVisible(false)} className="flex items-center gap-4 p-3 cursor-pointer border-b">
+                <img className="h-4 rotate-180" src={assets.dropdown_icon} alt="back" />
+                <p>Back</p>
                 </div>
-                <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/'>HOME</NavLink>
-                <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
-                <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/about'>ABOUT</NavLink>
-                <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
 
+                <NavLink onClick={() => setVisible(false)} className="py-2 pl-6 border" to="/">
+                HOME
+                </NavLink>
+
+                {/* COLLECTION with always visible subcategories */}
+                <div className="border-t border-b">
+                <div className="w-full py-2 pl-6 font-medium">
+                    COLLECTION
+                </div>
+
+                <div className="flex flex-col pl-10 border-t border-gray-200">
+                    <NavLink onClick={() => setVisible(false)} className="py-2" to="/collection/accessories">
+                    Accessories
+                    </NavLink>
+                    <NavLink onClick={() => setVisible(false)} className="py-2" to="/collection/women-clothing">
+                    Women’s Clothing
+                    </NavLink>
+                    <NavLink onClick={() => setVisible(false)} className="py-2" to="/collection/men-clothing">
+                    Men’s Clothing
+                    </NavLink>
+                    <NavLink onClick={() => setVisible(false)} className="py-2" to="/collection/kid-clothing">
+                    Kids Clothing
+                    </NavLink>
+                </div>
+                </div>
+
+                <NavLink onClick={() => setVisible(false)} className="py-2 pl-6 border" to="/about">
+                ABOUT
+                </NavLink>
+                <NavLink onClick={() => setVisible(false)} className="py-2 pl-6 border" to="/contact">
+                CONTACT
+                </NavLink>
+            </div>
             </div>
 
-        </div>
 
 
 
