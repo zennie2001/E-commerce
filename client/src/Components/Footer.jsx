@@ -8,7 +8,7 @@ function Footer() {
       };
     
   return (
-    <div className="bg-gray-100 pt-1 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+    <div className="bg-[#94b9ff] pt-1 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <div className='flex flex-col sm:grid grid-cols-[1.5fr_1fr_1fr] gap-14 my-10 mt-10 text-sm'>
             <div className='flex flex-col justify-start'>
                 <img src={assets.logo} className='mb-5 w-40 h-28 ' />
