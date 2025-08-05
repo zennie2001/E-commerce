@@ -17,51 +17,37 @@ export default function FAQContact() {
   };
     const faqs = [
         {
-            question: 'What types of projects does RG Creations specialize in?',
-            answer: ' We handle residential, commercial, hospitality, and entertainment spaces. This includes hotels, villas, banquet halls, nightclubs, offices, restaurants, retail outlets, and more.'
+            question: 'What is Forever Choice Pvt. Ltd.?',
+            answer: ' Forever Choice is a Kathmandu-based eCommerce company dedicated to offering quality products at competitive prices. We aim to deliver exceptional value and service to our customers across Nepal.'
         },
         {
-            question: 'Do you work only in Kathmandu or across Nepal?',
-            answer: ' We serve clients all over Nepal including Pokhara, Butwal, Chitwan, Dharan, Biratnagar, and even abroad for virtual design consulting.'
+            question: 'How can I place an order?',
+            answer: ' You can place an order by browsing products on our website, adding them to your cart, and proceeding to checkout. Once your order is confirmed, you’ll receive an email with your order details.'
         },
         {
-            question: 'Can I bring my own layout or concept?',
-            answer: ' Yes, we encourage client involvement. Whether you have reference images or hand-drawn sketches, our team will work closely with you to refine and bring your ideas to life.'
+            question: 'Do you deliver all over Nepal?',
+            answer: 'Yes, we offer delivery services across major cities and towns in Nepal. Some remote areas may have limited service – please contact us to confirm delivery availability for your location.'
         },
         {
-            question: 'Do you offer 3D walkthroughs before construction begins?',
-            answer: ' Yes. All major projects include 3D renderings, floor plans, and immersive walkthroughs to help you visualize your space before committing to construction.'
+            question: 'What are your delivery charges?',
+            answer: 'Delivery charges may vary depending on your location and order amount. We offer free delivery for orders above a certain threshold. You’ll see applicable charges at checkout.'
         },
          {
-            question: 'Do you also help with permits and government approvals?',
-            answer: ' Absolutely. We handle municipal drawing sets, permit applications, and compliance documentation required for construction in Nepal.'
+            question: 'Can I return or exchange a product?',
+            answer: 'Yes, we have a return/exchange policy for defective, damaged, or incorrect items. Please contact us within 3 days of delivery with relevant photos and your order ID.'
         },
-        {
-            question: 'Are your designs Vastu-compliant?',
-            answer: '  Yes, upon request we integrate Vastu Shastra principles while ensuring the design remains practical and modern.'
-        },
-        {
-            question: 'What is your typical project duration?',
-            answer: ' Design-only projects usually take 3 to 6 weeks. Design and build projects range from 3 months to over a year depending on the scale.'
-
-        },
-        {
-            question: 'Is RG Creations affordable for small businesses?',
-            answer: ' We offer scalable packages and flexible pricing tailored to your budget, ensuring high-quality service for startups and SMEs as well.'
-        },
-        {
-            question: 'How do I start working with you?',
-            answer: '  Contact us via our website or call us to schedule a design consultation. We will guide you through the process and provide a project estimate after understanding your needs.'
-        }
+        
+        
+       
     ]
   return (
     <section className="w-full  flex-col lg:px-24 px-4 lg:py-16 py-10 gap-12">
     <div className={twMerge("section-header  flex-col pb-6 ") }>
-      <p className="text-base font-bold text-[#333d49] lg:text-start text-left">
+      <p className="text-base font-bold text-[#94b9ff] lg:text-start text-left">
         FAQS
       </p>
       <p className="md:text-[30px] text-[1.5rem]  font-semibold  text-left ">
-        Got Questions? We’ve Got the<br/> Edge on Answers
+        Common Questions, Quick Answers
       </p>
     </div>
     <div className="flex_center lg:w-[70%] w-full">
@@ -81,7 +67,7 @@ export default function FAQContact() {
                 <RxCross2  className=" text-white" />
                 </div>
               ) : (
-                <div className='rounded-full p-3 bg-[#333d49]'>
+                <div className='rounded-full p-3 bg-green-800'>
                 <FaPlus className="  text-white" />
                 </div>
               )}
